@@ -1,4 +1,5 @@
 # JellyfinForWearOS 
+## The development of the app is paused right now, but it's not dead.
 **(In Development, it may change)**
 **Informations can be changed on the Website (currently in French), so check it out (pinned on the sidebar)**
 
