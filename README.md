@@ -1,4 +1,4 @@
-# JellyfinForWearOS 
+# MusicFinForWearOS 
 
 ##  The name of the project may change .
 ## The development of the app is paused right now, more info down below.
