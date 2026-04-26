@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jellyfin for WearOS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='icon' href='icon.png'
 </head>
 <body>
 
 <nav class="navbar">
     <div class="logo">Jellyfin <span>WearOS</span></div>
     <ul class="nav-links" id="navLinks">
-        <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
+        <li><a href="#" onclick="showSection('accueil')">Home</a></li>
         <li><a href="#" onclick="showSection('technique')">Technical Informations</a></li>
         <li><a href="#" onclick="showSection('development')">Development</a></li>
         <li><a href="#" onclick="showSection('faq')">Q&A / Tests</a></li>
@@ -23,6 +24,7 @@
         <h2>Development of the app is paused, for more info. go to the development page.</h2>
         <h1>A New way to listen to Music.</h1>
         <p class="subtitle">The third-party way to listen to music on WearOS</p>
+        <p class="subtitle">Since the app is in development, not all of these features are available, see the development page for more information.</p>
         <div class="grid">
             <div class="card">
                 <h3>Concept</h3>
@@ -85,16 +87,29 @@
 
 — The Development Team
         </div>
+        <div class="timeline">
+            <p>State of the app</p>
+            <p>
+
+            Hello everyone,
+
+            I would like to tell you where the app is stated : </p>
+
+            For now, only the login screen works. It works without the phone app, using the watch keyboard to enter the credentials. Once the credentials are entered, the app tries to connect to the server and retrieve the media library, but it is currently stuck on this step. The next steps will be to fix this issue, and then implement the media library screen, and the audio player.
+            The complication and the phone app companion are not developed yet, but they will be developed later.
+
+— The Development Team
+        </div>
     </section>
 
     <section id="faq" class="content-section">
         <h2>Support & Quality</h2>
         <div class="faq-item">
-            <h4>La musique s'arrête quand l'écran s'éteint ?</h4>
-            <p>Vérifiez que l'application a l'autorisation de fonctionner en arrière-plan dans les paramètres de la montre.</p>
+            <h4>To be completed</h4>
+            <p>To be completed</p>
         </div>
         <div class="test-table">
-            <h3>Plan de Recette</h3>
+            <h3>Plan de Recette (French)</h3>
             <p>L'application subit des tests rigoureux : streaming en moins de 3s, reprise de lecture précise et gestion automatique du Bluetooth.</p>
         </div>
     </section>

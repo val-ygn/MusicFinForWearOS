@@ -132,7 +132,7 @@ h1, h2 {
     background: #121212;
     padding: 1rem;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 h4 { color: var(--primary-color); margin: 0 0 10px 0; }
