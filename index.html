@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellyfin for WearOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Jellyfin <span>WearOS</span></div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
+        <li><a href="#" onclick="showSection('technique')">Technical Informations</a></li>
+        <li><a href="#" onclick="showSection('development')">Development</a></li>
+        <li><a href="#" onclick="showSection('faq')">Q&A / Tests</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <section id="accueil" class="content-section active">
+        <h2>Development of the app is paused, for more info. go to the development page.</h2>
+        <h1>A New way to listen to Music.</h1>
+        <p class="subtitle">The third-party way to listen to music on WearOS</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Concept</h3>
+                <p>A dedicated application that allows you to listen to music and audiobooks without needing your smartphone.</p>
+            </div>
+            <div class="card">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Streaming & Offline Mode</li>
+                    <li>Audio playback</li>
+                    <li>Simplified Configuration with the Companion app.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="technique" class="content-section">
+        <h2>Architecture & Design</h2>
+        <div class="info-block">
+            <h3>Visual Identity</h3>
+            <p>Design optimized for AMOLED screens: Pure black background (#000000) and Jellyfin purple (#BB86FC).</p>
+        </div>
+        <div class="info-block">
+            <h3>Data Flow</h3>
+            <p>The phone retrieves an AccessToken and transmits it to the watch via the Wearable Data Layer API.</p>
+        </div>
+        <div class="info-block">
+            <h3>Data Model</h3>
+            <p>Use of structured objects (MediaItem, Song, Audiobook) and a local Room database for offline mode.</p>
+        </div>
+    </section>
+
+    <section id="development" class="content-section">
+        <h2>Development</h2>
+        <div class="timeline">
+            <p>Project Update: Jellyfin for WearOS</p>
+            <p>
+
+            Hello everyone,
+
+            I would like to share some news regarding the development of Jellyfin for WearOS.
+
+            Temporary Hiatus
+
+            For the time being, active development of the application is being temporarily paused. Due to my studies and other personal priorities, my schedule is currently very full, which means that new features and major updates will take longer to arrive.
+
+            The Project is Not Dead.
+
+            It is very important to clarify that this project is not abandoned. Creating a high-quality WearOS client for Jellyfin remains a goal that is close to my heart. I simply consider this period as a "standby" phase to allow me to come back stronger later.
+
+            <p>What Continues:</p>
+
+            <p> If critical bugs are reported, I will do my best to fix them. </p>
+
+            <p> Feedback: Your suggestions and comments are always welcome. They will serve as my foundation once development resumes at full capacity. </p>
+
+            <p>The technical roadmap remains the same, and my ambition for the application has not changed. </p>
+
+            Thank you very much for your understanding and your support. This is only a "see you soon." </p>
+
+— The Development Team
+        </div>
+    </section>
+
+    <section id="faq" class="content-section">
+        <h2>Support & Quality</h2>
+        <div class="faq-item">
+            <h4>La musique s'arrête quand l'écran s'éteint ?</h4>
+            <p>Vérifiez que l'application a l'autorisation de fonctionner en arrière-plan dans les paramètres de la montre.</p>
+        </div>
+        <div class="test-table">
+            <h3>Plan de Recette</h3>
+            <p>L'application subit des tests rigoureux : streaming en moins de 3s, reprise de lecture précise et gestion automatique du Bluetooth.</p>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
