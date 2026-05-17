@@ -1,148 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jellyfin for WearOS</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel='icon' href='icon.png'
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MusicFin</title>
+    <meta
+      name="description"
+      content="MusicFin presente votre bibliotheque Jellyfin sur Android et Wear OS avec lecture, recherche, synchronisation montre et acces rapide."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="MusicFin">
+      <a class="brand" href="#top" aria-label="MusicFin home">
+        <img src="../app/src/main/ic_launcher-playstore.png" alt="" />
+        <span>MusicFin</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation">
+        <a href="#features" data-i18n="nav.features">Fonctions</a>
+        <a href="#workflow" data-i18n="nav.workflow">Parcours</a>
+        <a href="#download" data-i18n="nav.download">Installer</a>
+      </nav>
+      <div class="language-picker" aria-label="Language selector">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+    </header>
 
-<nav class="navbar">
-    <div class="logo">Jellyfin <span>WearOS</span></div>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#" onclick="showSection('accueil')">Home</a></li>
-        <li><a href="#" onclick="showSection('technique')">Technical Informations</a></li>
-        <li><a href="#" onclick="showSection('development')">Development</a></li>
-        <li><a href="#" onclick="showSection('faq')">Q&A / Tests</a></li>
-    </ul>
-</nav>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Client Jellyfin pour Android et Wear OS</p>
+          <h1 id="hero-title">MusicFin</h1>
+          <p class="hero-text" data-i18n="hero.text">
+            Retrouvez votre musique Jellyfin sur le telephone, envoyez la connexion a votre montre et controlez la lecture en quelques gestes.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#download" data-i18n="hero.primary">Installer les builds</a>
+            <a class="button secondary" href="#features" data-i18n="hero.secondary">Comprendre l'app</a>
+          </div>
+        </div>
 
-<main class="container">
-    <section id="accueil" class="content-section active">
-        <h2>Development of the app is paused, for more info. go to the development page.</h2>
-        <h1>A New way to listen to Music.</h1>
-        <p class="subtitle">The third-party way to listen to music on WearOS</p>
-        <p class="subtitle">Since the app is in development, not all of these features are available, see the development page for more information.</p>
-        <div class="grid">
-            <div class="card">
-                <h3>Concept</h3>
-                <p>A dedicated application that allows you to listen to music and audiobooks without needing your smartphone.</p>
+        <div class="product-stage" aria-label="MusicFin interface preview">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="app-topline">
+                <span>MusicFin</span>
+                <span>Sync</span>
+              </div>
+              <div class="hello" data-i18n="mock.hello">Bonjour Valentin</div>
+              <div class="search-row" data-i18n="mock.search">Recherche</div>
+              <div class="track active">
+                <span class="cover blue"></span>
+                <span>
+                  <strong data-i18n="mock.track1">Ocean Drive</strong>
+                  <small data-i18n="mock.artist1">Playlist Jellyfin</small>
+                </span>
+                <b>Play</b>
+              </div>
+              <div class="track">
+                <span class="cover coral"></span>
+                <span>
+                  <strong data-i18n="mock.track2">Late Night Audio</strong>
+                  <small data-i18n="mock.artist2">Album recent</small>
+                </span>
+                <b>Lire</b>
+              </div>
+              <div class="player-bar">
+                <span class="cover green"></span>
+                <span>
+                  <strong data-i18n="mock.now">Lecture en cours</strong>
+                  <small data-i18n="mock.device">Telephone et montre</small>
+                </span>
+              </div>
             </div>
-            <div class="card">
-                <h3>Key Features</h3>
-                <ul>
-                    <li>Streaming & Offline Mode</li>
-                    <li>Audio playback</li>
-                    <li>Simplified Configuration with the Companion app.</li>
-                </ul>
+          </div>
+
+          <div class="watch-frame">
+            <div class="watch-screen">
+              <img src="../app/src/main/ic_launcher-playstore.png" alt="" />
+              <strong>MusicFin</strong>
+              <span data-i18n="mock.watch">Controle montre</span>
+              <div class="watch-controls">
+                <i></i>
+                <i class="big"></i>
+                <i></i>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="technique" class="content-section">
-        <h2>Architecture & Design</h2>
-        <div class="info-block">
-            <h3>Visual Identity</h3>
-            <p>Design optimized for AMOLED screens: Pure black background (#000000) and Jellyfin purple (#BB86FC).</p>
+      <section class="summary-band" aria-label="MusicFin summary">
+        <div>
+          <strong data-i18n="summary.one.title">Jellyfin d'abord</strong>
+          <span data-i18n="summary.one.text">Connexion par serveur, utilisateur et mot de passe.</span>
         </div>
-        <div class="info-block">
-            <h3>Data Flow</h3>
-            <p>The phone retrieves an AccessToken and transmits it to the watch via the Wearable Data Layer API.</p>
+        <div>
+          <strong data-i18n="summary.two.title">Mobile + montre</strong>
+          <span data-i18n="summary.two.text">Le telephone transmet la session a Wear OS.</span>
         </div>
-        <div class="info-block">
-            <h3>Data Model</h3>
-            <p>Use of structured objects (MediaItem, Song, Audiobook) and a local Room database for offline mode.</p>
+        <div>
+          <strong data-i18n="summary.three.title">Lecture rapide</strong>
+          <span data-i18n="summary.three.text">Reprendre, recents, non lus, recherche et file d'attente.</span>
         </div>
-    </section>
+      </section>
 
-    <li><a href="#" onclick="showSection('galerie')">Galerie</a></li>
-
-<section id="galerie" class="content-section">
-    <h2>Interface de l'Application</h2>
-    <p class="subtitle">Aperçu du rendu sur écran circulaire AMOLED.</p>
-    
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <div class="watch-mockup">
-                <img src="accueil.png" alt="Écran d'accueil">
-            </div>
-            <span>Menu Principal</span>
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="features.eyebrow">Ce que fait MusicFin</p>
+          <h2 id="features-title" data-i18n="features.title">Une interface courte pour aller vite dans votre bibliotheque audio.</h2>
         </div>
-        <div class="gallery-item">
-            <div class="watch-mockup">
-                <img src="player.png" alt="Lecteur audio">
-            </div>
-            <span>Lecteur (Now Playing)</span>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-icon">01</span>
+            <h3 data-i18n="features.library.title">Bibliotheques Jellyfin</h3>
+            <p data-i18n="features.library.text">MusicFin affiche les bibliotheques musique et livres audio, puis charge les pistes avec pochettes, artistes et albums.</p>
+          </article>
+          <article>
+            <span class="feature-icon">02</span>
+            <h3 data-i18n="features.playback.title">Lecture integree</h3>
+            <p data-i18n="features.playback.text">Controlez play, pause, piste suivante et precedente depuis le telephone ou la montre.</p>
+          </article>
+          <article>
+            <span class="feature-icon">03</span>
+            <h3 data-i18n="features.watch.title">Connexion montre</h3>
+            <p data-i18n="features.watch.text">Le mobile envoie les identifiants a Wear OS pour eviter de retaper l'adresse Jellyfin sur un petit ecran.</p>
+          </article>
+          <article>
+            <span class="feature-icon">04</span>
+            <h3 data-i18n="features.offline.title">Mode montre soigne</h3>
+            <p data-i18n="features.offline.text">Sur Wear OS, MusicFin propose details de piste, file d'attente, recherche vocale, volume et telechargement hors-ligne.</p>
+          </article>
         </div>
-        <div class="gallery-item">
-            <div class="watch-mockup">
-                <img src="settings.png" alt="Paramètres">
-            </div>
-            <span>Paramètres & Stockage</span>
+      </section>
+
+      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="workflow.eyebrow">Parcours simple</p>
+          <h2 id="workflow-title" data-i18n="workflow.title">Trois etapes pour passer de Jellyfin a la montre.</h2>
         </div>
-    </div>
-</section>
+        <ol class="steps">
+          <li>
+            <span>1</span>
+            <h3 data-i18n="workflow.step1.title">Connectez Jellyfin</h3>
+            <p data-i18n="workflow.step1.text">Entrez l'adresse du serveur, votre utilisateur et votre mot de passe dans l'app Android.</p>
+          </li>
+          <li>
+            <span>2</span>
+            <h3 data-i18n="workflow.step2.title">Envoyez a la montre</h3>
+            <p data-i18n="workflow.step2.text">Le bouton Montre partage la connexion avec l'app Wear OS appairee.</p>
+          </li>
+          <li>
+            <span>3</span>
+            <h3 data-i18n="workflow.step3.title">Lancez la lecture</h3>
+            <p data-i18n="workflow.step3.text">Choisissez une bibliotheque, reprenez une piste ou controlez le player depuis le poignet.</p>
+          </li>
+        </ol>
+      </section>
 
-    <section id="development" class="content-section">
-        <h2>Development</h2>
-        <div class="timeline">
-            <p>Project Update: Jellyfin for WearOS</p>
-            <p>
-
-            Hello everyone,
-
-            I would like to share some news regarding the development of Jellyfin for WearOS.
-
-            Temporary Hiatus
-
-            For the time being, active development of the application is being temporarily paused. Due to my studies and other personal priorities, my schedule is currently very full, which means that new features and major updates will take longer to arrive.
-
-            The Project is Not Dead.
-
-            It is very important to clarify that this project is not abandoned. Creating a high-quality WearOS client for Jellyfin remains a goal that is close to my heart. I simply consider this period as a "standby" phase to allow me to come back stronger later.
-
-            <p>What Continues:</p>
-
-            <p> If critical bugs are reported, I will do my best to fix them. </p>
-
-            <p> Feedback: Your suggestions and comments are always welcome. They will serve as my foundation once development resumes at full capacity. </p>
-
-            <p>The technical roadmap remains the same, and my ambition for the application has not changed. </p>
-
-            Thank you very much for your understanding and your support. This is only a "see you soon." </p>
-
-— The Development Team
+      <section class="download" id="download" aria-labelledby="download-title">
+        <div>
+          <p class="eyebrow" data-i18n="download.eyebrow">Builds locaux</p>
+          <h2 id="download-title" data-i18n="download.title">Tester MusicFin sur telephone et montre.</h2>
+          <p data-i18n="download.text">
+            Les APK debug existent deja dans le projet. Installez le client telephone, puis l'app Wear OS avec la meme signature de build.
+          </p>
         </div>
-        <div class="timeline">
-            <p>State of the app</p>
-            <p>
-
-            Hello everyone,
-
-            I would like to tell you where the app is stated : </p>
-
-            For now, only the login screen works. It works without the phone app, using the watch keyboard to enter the credentials. Once the credentials are entered, the app tries to connect to the server and retrieve the media library, but it is currently stuck on this step. The next steps will be to fix this issue, and then implement the media library screen, and the audio player.
-            The complication and the phone app companion are not developed yet, but they will be developed later.
-
-— The Development Team
+        <div class="download-actions">
+          <a class="button primary" href="../phone/build/outputs/apk/debug/phone-debug.apk" data-i18n="download.phone">APK Android</a>
+          <a class="button secondary" href="../app/build/outputs/apk/debug/app-debug.apk" data-i18n="download.watch">APK Wear OS</a>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <section id="faq" class="content-section">
-        <h2>Support & Quality</h2>
-        <div class="faq-item">
-            <h4>To be completed</h4>
-            <p>To be completed</p>
-        </div>
-        <div class="test-table">
-            <h3>Plan de Recette (French)</h3>
-            <p>L'application subit des tests rigoureux : streaming en moins de 3s, reprise de lecture précise et gestion automatique du Bluetooth.</p>
-        </div>
-    </section>
-</main>
+    <footer>
+      <span data-i18n="footer.text">MusicFin est un projet compagnon Jellyfin pour garder votre audio a portee de main.</span>
+    </footer>
 
-<script src="script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
